@@ -14,10 +14,10 @@ This project serves mostly as a platform for me to build on my coding and hardwa
 - [x] Build hand-wired POC
 - [x] Design PCB for 2x2 version
 - [x] Assemble & test 2x2 version
-- [] Set up web server
-- [] Connect individual interactiles to web server
-- [] Web interface for monitoring
-- [] Develop large scale version
-- [] Large scale version module development
-- [] Build large scale version
-- [] deploy
+- [ ] Set up web server
+- [ ] Connect individual interactiles to web server
+- [ ] Web interface for monitoring
+- [ ] Develop large scale version
+- [ ] Large scale version module development
+- [ ] Build large scale version
+- [ ] deploy
