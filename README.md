@@ -18,6 +18,6 @@ This project serves mostly as a platform for me to build on my coding and hardwa
 - [ ] Connect individual interactiles to web server
 - [ ] Web interface for monitoring
 - [ ] Develop large scale version
-- [ ] Large scale version module development
+- [x] Large scale version module development (wip)
 - [ ] Build large scale version
 - [ ] deploy
