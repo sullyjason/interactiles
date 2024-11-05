@@ -1,0 +1,11 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"10k_2, 10k",R_Array_Concave_4x0603,2,R_Pack04,
+C2,0805,1,10uF,
+C3,0805,1,0.1uF,
+"H1, H2, H3, H4",MountingHole_3.2mm_Pad,4,MountingHole_M3_3.2mm_Pad,
+J1,TE_1-84952-6_1x16-1MP_P1.0mm_Horizontal,1,PINHD_1x16_Male,
+J2,Molex_PicoBlade_53261-0471_1x04-1MP_P1.25mm_Horizontal,1,PINHD_1x4_Male,
+J3,PinHeader_1x04_P2.54mm_Vertical,1,PINHD_1x4_Male,
+MCP23017,SSOP-28_3.9x9.9mm_P0.635mm,1,MCP23017_ML,
+"R4, R5",0805,2,10k,
+SW2,SW_DIP_SPSTx03_Slide_6.7x9.18mm_W8.61mm_P2.54mm_LowProfile,1,SW_DIP_x03,
