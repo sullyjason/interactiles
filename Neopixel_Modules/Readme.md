@@ -14,6 +14,9 @@ Using the largest assembly of the manufacturer's PLB product line, measuring alo
 
 Using a MCP23017. For use with the large module or future switch modules. Reduces the 15 individual switch lines to two i2c lines. Using a dip switch to set the i2c address.
 
+https://learn.adafruit.com/adafruit-mcp23017-i2c-gpio-expander
+https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library
+
 <img src="IOExpander.png" width="70%"/>
 
 ## Mini
