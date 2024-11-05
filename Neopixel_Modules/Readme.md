@@ -26,4 +26,9 @@ Pinout on i/o expander is not intuitive as a result, refer to schematic.
 
 ## Controller (WIP)
 
-Controller for a string of a maximum of 8 3x5 modules, using an ESP32 and MCP32017s.
+Controller for a string of a maximum of 8 3x5 modules, using an ESP32.
+- ESP32
+- Charger, if battery power is used (make optional?) and USB-C port with PD circuit?
+- On/off switch and small LED indicator
+- Toggle switch for "Set" or "program" mode for configuration
+- ?
