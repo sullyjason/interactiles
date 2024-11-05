@@ -1,5 +1,3 @@
-Readme.md
-
 # Modules of addressable RGB switch panels in various sizes
 
 Configurations of 3x5 Switches to create a 15 pixel grid, listening for key interrupts via an MCP23017 i2c I/O expander. The switches are provided by Lakeview Electronics in Shenzhen. They are invididually addressable and compatible with the Neopixel library. 
@@ -25,3 +23,7 @@ Using the smallest assembly of the manufacturer's TL1 product line, measuring on
 Pinout on i/o expander is not intuitive as a result, refer to schematic. 
 
 <img src="MiniModule.png" width="70%"/>
+
+## Controller (WIP)
+
+Controller for a string of a maximum of 8 3x5 modules, using an ESP32 and MCP32017s.
