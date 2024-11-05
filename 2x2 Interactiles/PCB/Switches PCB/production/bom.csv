@@ -1,0 +1,7 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+J1,PinHeader_1x04_P2.54mm_Vertical,1,PINHD_1x4_Male,
+J2,PinHeader_1x13_P2.54mm_Vertical,1,PINHD_1x13_Male,
+SW1,Honyone Tactile Switch RGB,1,RGB_SW_1,
+SW2,Honyone Tactile Switch RGB,1,RGB_SW_2,
+SW3,Honyone Tactile Switch RGB,1,RGB_SW_3,
+SW4,Honyone Tactile Switch RGB,1,RGB_SW_4,
