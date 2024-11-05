@@ -8,5 +8,4 @@ The enclosure is 3D printed in PLA with an acrylic backplate, secured with M2 sc
 
 The battery is a CR123 sized 3.7 Li-Ion and provides the entire device with power. A polarity protection circuit protects the PCB but there is no charging circuit. 
 
-<img src="IMG_0254.jpeg" width="70%"/>
-<img src="IMG_0391.jpeg" width="70%"/>
+<img src="IMG_0254.jpeg" width="40%"/> <img src="IMG_0391.jpeg" width="40%"/>
