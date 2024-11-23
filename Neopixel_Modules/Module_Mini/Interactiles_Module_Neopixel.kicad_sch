@@ -2329,123 +2329,6 @@
 				)
 			)
 		)
-		(symbol "PCM_SL_Resistors:10k"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "10k"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-				(at 0.889 -4.318 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0.508 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "10kΩ, 1/4W Resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "10k_0_1"
-				(rectangle
-					(start -2.286 0.889)
-					(end 2.286 -0.889)
-					(stroke
-						(width 0.24)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "10k_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 1.5)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 1.5)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "PCM_SL_Resistors:330ohm"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2919,12 +2802,6 @@
 		(uuid "0733b5bf-f2c9-416a-b8f7-16d87453b08d")
 	)
 	(junction
-		(at 217.17 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0a7b4179-b939-4c18-a691-7c5e27c52a66")
-	)
-	(junction
 		(at 199.39 62.23)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3099,6 +2976,10 @@
 		(uuid "eac13e53-0387-4971-9939-59ed75cc513b")
 	)
 	(no_connect
+		(at 233.68 25.4)
+		(uuid "0544cb15-8661-4e4b-9e64-1673d6bc7677")
+	)
+	(no_connect
 		(at 209.55 96.52)
 		(uuid "23fc87a1-ec16-4fc4-9fbd-f81e08584073")
 	)
@@ -3115,12 +2996,24 @@
 		(uuid "a0712614-4bf0-4be9-b5ba-cc8f81c7d617")
 	)
 	(no_connect
+		(at 236.22 35.56)
+		(uuid "abd2598d-763c-47f4-8fdb-2fb7621bf301")
+	)
+	(no_connect
 		(at 226.06 58.42)
 		(uuid "b1514a30-c863-4126-bd92-0d347fcd49c8")
 	)
 	(no_connect
 		(at 226.06 68.58)
 		(uuid "d0d56c3f-6a4f-4fa4-b733-2cbbbacbc5ed")
+	)
+	(no_connect
+		(at 233.68 35.56)
+		(uuid "f0ab9b1f-1569-4bbe-8a0a-3dd4be1c8a30")
+	)
+	(no_connect
+		(at 236.22 25.4)
+		(uuid "fdc9a0ef-93fc-4d3a-86bb-775074b57e71")
 	)
 	(wire
 		(pts
@@ -3184,7 +3077,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 123.19) (xy 132.08 123.19)
+			(xy 120.65 123.19) (xy 130.81 123.19)
 		)
 		(stroke
 			(width 0)
@@ -3294,7 +3187,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 52.07) (xy 144.78 52.07)
+			(xy 130.81 52.07) (xy 144.78 52.07)
 		)
 		(stroke
 			(width 0)
@@ -3384,7 +3277,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 49.53) (xy 124.46 53.34)
+			(xy 118.11 49.53) (xy 118.11 53.34)
 		)
 		(stroke
 			(width 0)
@@ -3404,7 +3297,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 49.53) (xy 124.46 49.53)
+			(xy 115.57 49.53) (xy 118.11 49.53)
 		)
 		(stroke
 			(width 0)
@@ -3471,16 +3364,6 @@
 			(type default)
 		)
 		(uuid "302dd3bc-7665-4c6e-a9fd-2b0990004b43")
-	)
-	(wire
-		(pts
-			(xy 254 175.26) (xy 254 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "336893ca-cb24-4ae9-89bc-752eea083dd9")
 	)
 	(wire
 		(pts
@@ -3754,7 +3637,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 123.19) (xy 132.08 52.07)
+			(xy 130.81 123.19) (xy 130.81 52.07)
 		)
 		(stroke
 			(width 0)
@@ -3884,16 +3767,6 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 152.4) (xy 260.35 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5baa7e48-165e-4ea5-a9a2-24b354731ee4")
-	)
-	(wire
-		(pts
 			(xy 204.47 62.23) (xy 204.47 68.58)
 		)
 		(stroke
@@ -3931,6 +3804,26 @@
 			(type default)
 		)
 		(uuid "6370333c-8f99-4094-bd36-f33cec646f7e")
+	)
+	(wire
+		(pts
+			(xy 231.14 35.56) (xy 232.41 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6559c136-4472-41e2-8ade-8a3ccc7ec23c")
+	)
+	(wire
+		(pts
+			(xy 228.6 20.32) (xy 228.6 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66ee2d83-f715-4c8d-a002-f8ebd0384f67")
 	)
 	(wire
 		(pts
@@ -4004,7 +3897,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 53.34) (xy 25.4 53.34)
+			(xy 118.11 53.34) (xy 25.4 53.34)
 		)
 		(stroke
 			(width 0)
@@ -4071,16 +3964,6 @@
 			(type default)
 		)
 		(uuid "76070694-5419-4b74-99dc-9bedcc2a325d")
-	)
-	(wire
-		(pts
-			(xy 255.27 172.72) (xy 255.27 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "783c767a-8c9f-465a-86d3-b04fec9ceb6a")
 	)
 	(wire
 		(pts
@@ -4374,16 +4257,6 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 154.94) (xy 259.08 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a990e1b9-c93b-4db4-920e-71fd5aa9750b")
-	)
-	(wire
-		(pts
 			(xy 124.46 151.13) (xy 121.92 151.13)
 		)
 		(stroke
@@ -4624,6 +4497,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 21.59) (xy 232.41 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc8f9110-6819-46a4-a039-402ef61dd20b")
+	)
+	(wire
+		(pts
 			(xy 82.55 49.53) (xy 97.79 49.53)
 		)
 		(stroke
@@ -4674,6 +4557,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 25.4) (xy 231.14 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d75a6f47-69f0-4709-abd8-05cd605cf7fd")
+	)
+	(wire
+		(pts
 			(xy 116.84 87.63) (xy 116.84 93.98)
 		)
 		(stroke
@@ -4681,16 +4574,6 @@
 			(type default)
 		)
 		(uuid "d75ca415-8fab-4f36-8780-ed0f9ca6b51c")
-	)
-	(wire
-		(pts
-			(xy 228.6 26.67) (xy 228.6 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db02f7cd-d3b2-47a1-887b-8234f78927ea")
 	)
 	(wire
 		(pts
@@ -4894,6 +4777,16 @@
 	)
 	(wire
 		(pts
+			(xy 217.17 154.94) (xy 217.17 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0bb8912-8d1a-402b-9701-e9e4a1e8fa37")
+	)
+	(wire
+		(pts
 			(xy 118.11 39.37) (xy 115.57 39.37)
 		)
 		(stroke
@@ -4934,16 +4827,6 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 154.94) (xy 260.35 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fab4f4ba-5c1d-4ac7-8edb-86de2087d02a")
-	)
-	(wire
-		(pts
 			(xy 86.36 77.47) (xy 86.36 83.82)
 		)
 		(stroke
@@ -4964,23 +4847,13 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 26.67) (xy 232.41 27.94)
+			(xy 232.41 20.32) (xy 232.41 21.59)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "fd9ca113-9e23-42da-8fef-63af02bd52ae")
-	)
-	(wire
-		(pts
-			(xy 255.27 175.26) (xy 254 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe54490f-c637-4140-9b2e-1e2403deea09")
 	)
 	(wire
 		(pts
@@ -6105,7 +5978,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 228.6 26.67 0)
+		(at 228.6 20.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6114,7 +5987,7 @@
 		(fields_autoplaced yes)
 		(uuid "0ab01a7d-06b0-4568-bf69-569c7c7d9a4f")
 		(property "Reference" "#PWR039"
-			(at 228.6 30.48 0)
+			(at 228.6 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6123,7 +5996,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 228.6 21.59 0)
+			(at 228.6 15.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6131,7 +6004,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 228.6 26.67 0)
+			(at 228.6 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6140,7 +6013,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 228.6 26.67 0)
+			(at 228.6 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6149,7 +6022,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 228.6 26.67 0)
+			(at 228.6 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6382,75 +6255,6 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SL_Resistors:10k")
-		(at 232.41 31.75 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0f93221e-ec14-4019-a6bd-5e01e75ed398")
-		(property "Reference" "R3"
-			(at 234.442 30.48 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 234.442 33.02 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 236.728 30.861 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 232.41 31.242 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "10kΩ, 1/4W Resistor"
-			(at 232.41 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5de1f183-5b26-4ead-8946-4d29e37f48a7")
-		)
-		(pin "2"
-			(uuid "9858e500-b678-4e69-920c-eb36fcfc12b7")
-		)
-		(instances
-			(project "Interactiles_Module_Neopixel"
-				(path "/c6d68636-4732-4ee0-ae58-e772e9177723"
-					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 59.69 119.38 0)
 		(unit 1)
@@ -6649,7 +6453,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 232.41 26.67 0)
+		(at 232.41 20.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6658,7 +6462,7 @@
 		(fields_autoplaced yes)
 		(uuid "1ecb8f98-8682-4ee7-a2bb-2d3c991c5e67")
 		(property "Reference" "#PWR040"
-			(at 232.41 30.48 0)
+			(at 232.41 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6667,7 +6471,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 232.41 21.59 0)
+			(at 232.41 15.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6675,7 +6479,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 232.41 26.67 0)
+			(at 232.41 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6684,7 +6488,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 232.41 26.67 0)
+			(at 232.41 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6693,7 +6497,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 232.41 26.67 0)
+			(at 232.41 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6714,17 +6518,16 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SL_Pin_Headers:PINHD_1x2_Female")
-		(at 220.98 157.48 0)
+		(lib_id "Device:R_Pack04")
+		(at 233.68 30.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "21ac21cf-c787-451b-8eb5-333258973fac")
-		(property "Reference" "J8"
-			(at 223.52 156.2099 0)
+		(uuid "2206ccd3-b919-45e5-8028-262c26486935")
+		(property "Reference" "RN3"
+			(at 238.76 29.2099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6732,18 +6535,17 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PINHD_1x2_Female"
-			(at 223.52 158.7499 0)
+		(property "Value" "R_Pack04"
+			(at 238.76 31.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical"
-			(at 223.52 147.32 0)
+		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
+			(at 240.665 30.48 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6751,8 +6553,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 220.98 149.86 0)
+		(property "Datasheet" "~"
+			(at 233.68 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6760,8 +6562,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Pin Header female with pin space 2.54mm. Pin Count -2"
-			(at 220.98 157.48 0)
+		(property "Description" "4 resistor network, parallel topology"
+			(at 233.68 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6769,16 +6571,34 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "990fed1e-d16d-4137-8190-309b07af169f")
+		(pin "6"
+			(uuid "394f33e7-4bbf-41e2-a2cc-24aa29df640e")
+		)
+		(pin "5"
+			(uuid "54dc50fb-8f80-4bb5-bdca-54e3d9ab30e1")
 		)
 		(pin "2"
-			(uuid "c6ef79a7-7a5a-450a-ae58-31c93eadc6f2")
+			(uuid "15b952f6-db39-4384-abcb-b68b2abc1def")
+		)
+		(pin "4"
+			(uuid "6a6d350f-d146-4883-91b6-9cbc2d4a1b1c")
+		)
+		(pin "3"
+			(uuid "55cafaa1-070e-4b08-ae67-28810dd770da")
+		)
+		(pin "8"
+			(uuid "5de0e260-43d4-4c51-b99d-fbc9f8978b5d")
+		)
+		(pin "1"
+			(uuid "2d2a6b4d-65fc-4168-a7e7-7bfbb32a695e")
+		)
+		(pin "7"
+			(uuid "6073feeb-eec2-423b-9b95-69d9b9faf7a7")
 		)
 		(instances
 			(project "Interactiles_Module_Neopixel"
 				(path "/c6d68636-4732-4ee0-ae58-e772e9177723"
-					(reference "J8")
+					(reference "RN3")
 					(unit 1)
 				)
 			)
@@ -8768,7 +8588,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical"
 			(at 260.35 135.89 0)
 			(effects
 				(font
@@ -9022,75 +8842,6 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SL_Resistors:10k")
-		(at 228.6 31.75 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "78323aee-8793-4f06-9678-f846de414d20")
-		(property "Reference" "R2"
-			(at 224.028 30.48 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 223.012 33.02 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 232.918 30.861 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 228.6 31.242 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "10kΩ, 1/4W Resistor"
-			(at 228.6 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "35b06f9a-e281-4470-93b3-d6c5387ceb4f")
-		)
-		(pin "2"
-			(uuid "01085b5b-22c8-4ff9-9a03-2a21a11586b9")
-		)
-		(instances
-			(project "Interactiles_Module_Neopixel"
-				(path "/c6d68636-4732-4ee0-ae58-e772e9177723"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 261.62 40.64 0)
 		(unit 1)
@@ -9318,77 +9069,6 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SL_Pin_Headers:PINHD_1x2_Female")
-		(at 264.16 153.67 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8df0cea7-848a-4433-81a8-1e6e8193a6ea")
-		(property "Reference" "J3"
-			(at 266.7 152.3999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PINHD_1x2_Female"
-			(at 266.7 154.9399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical"
-			(at 266.7 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 264.16 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Pin Header female with pin space 2.54mm. Pin Count -2"
-			(at 264.16 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "34cff097-5caa-4ceb-a057-7b9e9882d797")
-		)
-		(pin "2"
-			(uuid "71529f6d-d2bc-46bd-a129-8dadd85213c1")
-		)
-		(instances
-			(project "Interactiles_Module_Neopixel"
-				(path "/c6d68636-4732-4ee0-ae58-e772e9177723"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "PCM_SL_Resistors:330ohm")
 		(at 209.55 139.7 0)
 		(unit 1)
@@ -9589,77 +9269,6 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SL_Pin_Headers:PINHD_1x2_Female")
-		(at 259.08 173.99 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9e7af889-0ab7-4e4b-ae9e-5b15ccec742f")
-		(property "Reference" "J6"
-			(at 261.62 172.7199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PINHD_1x2_Female"
-			(at 261.62 175.2599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical"
-			(at 261.62 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 259.08 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Pin Header female with pin space 2.54mm. Pin Count -2"
-			(at 259.08 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "facbb0eb-0dd3-44bf-8d5e-af0d16709c6e")
-		)
-		(pin "2"
-			(uuid "4e34857e-ce4d-416a-817a-193781bacd71")
-		)
-		(instances
-			(project "Interactiles_Module_Neopixel"
-				(path "/c6d68636-4732-4ee0-ae58-e772e9177723"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 91.44 45.72 0)
 		(unit 1)
@@ -9753,7 +9362,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical"
 			(at 259.08 154.94 0)
 			(effects
 				(font
@@ -10724,6 +10333,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Value" "PINHD_1x2_Male"
@@ -10736,7 +10346,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical"
 			(at 222.25 161.29 0)
 			(effects
 				(font
