@@ -1,0 +1,9 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+D1,1206,1,LED,
+J1,"TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal",1,Screw_Terminal_2_P3.50mm,
+J2,PinHeader_1x15_P2.54mm_Vertical,1,PINHD_1x15_Male,
+J3,TE_1-84952-6_1x16-1MP_P1.0mm_Horizontal,1,PINHD_1x15_Male,
+J4,PinSocket_1x02_P2.54mm_Vertical,1,PINHD_1x2_Female,
+R1,0805,1,330ohm,
+"RGB_SW1, RGB_SW10, RGB_SW11, RGB_SW12, RGB_SW13, RGB_SW14, RGB_SW15, RGB_SW2, RGB_SW3, RGB_SW4, RGB_SW5, RGB_SW6, RGB_SW7, RGB_SW8, RGB_SW9",PLB-N1PRGB-GTW-AI,15,PLB_RGB_SW,
+SW1,SW_DPDT_CK_JS202011JCQN,1,SW_SPST,
