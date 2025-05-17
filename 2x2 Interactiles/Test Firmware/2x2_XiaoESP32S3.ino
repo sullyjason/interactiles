@@ -1,4 +1,4 @@
-#Code for 2x2 PCB using the Xiao Seeeduino ESP32S3
+//Code for 2x2 PCB using the Xiao Seeeduino ESP32S3
 
 #include <Adafruit_NeoPixel.h>
 #include <Keypad.h>
