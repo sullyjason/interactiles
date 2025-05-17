@@ -7,7 +7,7 @@
 #define PIN 20       // Pin connected to the NeoPixel data line
 #define NUMPIXELS 4  // Total number of pixels in the strip
 
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_RGB + NEO_KHZ800);
 
 // Keypad setup
 const byte ROWS = 2;  // 2 rows
