@@ -1,181 +1,299 @@
-#include <WiFi.h>
-#include <PubSubClient.h>
-#include <Adafruit_NeoPixel.h>
-#include <Keypad.h>
-#include <string.h>  // ADD THIS CRITICAL MISSING LIBRARY
+//Code to test the functionality of all sensors and actuators with new CLAW PCB
+//working as of 09.09.24
+//all pin assignments correct
+//callbrated, +- 10g at factor of -210 was achieved using callibration script, but will not work here
+//LRA not integrated
 
-// Wi-Fi credentials
-const char* ssid = "SSID";
-const char* password = "PASSWORD";
+#include <HX711.h>
+#include <DRV8833.h>
+#include <PWMServo.h>
 
-#define PIN 44
-#define NUMPIXELS 4
+#define DEBUG 0
 
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_RGB + NEO_KHZ800);
+const int LOADCELL_DOUT_PIN = 18;
+const int LOADCELL_SCK_PIN = 19;
+long reading = 0;
+HX711 scale;
 
-// MQTT setup
-const char* mqtt_server = "test.mosquitto.org";
-const int mqtt_port = 1883;
-const char* base_topic = "interactiles/space1";
+#define Xaxis_pin A3 // Arduino pin connected to the VRx Pin - pin 17
+#define Yaxis_pin A2 // Arduino pin connected to the VRy Pin - pin 16
+#define SW_pin 15 // Arduino pin connected to the SW Pin
+#define LIGHT_SENSOR A6      // select the pin for the LED
 
-WiFiClient espClient;
-PubSubClient client(espClient);
+DRV8833 driver = DRV8833();
+String vibration = "10";
 
-// Keypad setup
-const byte ROWS = 2;
-const byte COLS = 2;
-char keys[ROWS][COLS] = {{'4','2'}, {'3','1'}};
-byte rowPins[ROWS] = {43, 4};
-byte colPins[COLS] = {8, 9};
-Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
+#define SLP_PIN 4
 
-const int numStates = 8;
-enum LedState { OFF, RED, ORANGE, GREEN, TEAL, BLUE, PURPLE, WHITE }; // FIXED TYPO: WHITE
-LedState currentStates[NUMPIXELS] = {OFF, OFF, OFF, OFF};
+const int inputA1 = 9, inputA2 = 10;
 
-void setup_wifi() {
-  Serial.print("Connecting to WiFi");
-  WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
+
+// /******* Voise Coil parametrs ******/
+
+int   patternLength = 500;
+int   hapticPattern[ 500 ];
+int   patternIndex = 0;
+
+uint32_t timeSinceLoop = 0;
+uint32_t timeSinceLoadCell = 0;
+uint32_t timeSinceTest = 0; 
+uint32_t timeSinceAmpChange = 0;
+uint32_t timeSinceLRATest = 0;
+
+uint32_t testLoop = 1000000; // microseconds
+uint32_t loadCellPing = 110000; //microseconds. Any less than 90ms or 110000µs and it will not find hx711 every time
+float timeBetweenAmpChanges; // Was previously called timeBetweenUpdates 
+// uint32_t LRATestInterval = 1000000;
+// uint32_t LRAStart = 
+// uint32_t LRAStop = 
+
+uint32_t Now = 0;
+float deltat = 0.0f;        // integration interval for both filter schemes
+
+bool LED_STATE = 0;
+
+PWMServo myservo;  // create servo object to control a servo
+#define SERVO_PIN 5
+const int servoOpen = 115;    // when claw is fully open (widest possible position for finger)
+const int servoClosed = 165;  // fully closed
+float timeBetweenServoMoves = 6000; //microseconds
+uint32_t timeSinceServoMove = 0;
+int servoPos;
+int joystickPos;
+const int joystickOpen = 250; //when the joystick is moved left far enough, it will reach this value. Compare joystick analogread value to this.
+const int joystickClose = 780; // ditto but when moved right
+
+
+
+///////////////////BLINKING LED//////////////////////
+
+//to show the device is runnning
+
+void blinkLED() {
+  if (LED_STATE) {
+    digitalWrite (LED_BUILTIN, LOW);
+    LED_STATE = 0;
+  } else {
+    digitalWrite (LED_BUILTIN, HIGH);
+    LED_STATE = 1;
   }
-  Serial.println("\nConnected!");
-  Serial.print("IP: ");
-  Serial.println(WiFi.localIP());
 }
 
-void callback(char* topic, byte* payload, unsigned int length) {
-  char msg[length + 1];
-  memcpy(msg, payload, length);
-  msg[length] = '\0';
+
+///////////////////JOYSTICK//////////////////////
+
+void setupJoystick() {
+  pinMode(SW_pin, INPUT_PULLUP);
+  pinMode(Xaxis_pin, INPUT);
+  pinMode(Yaxis_pin, INPUT);
+}
+
+void readJoystick(){
+  Serial.print("X-axis: ");
+  Serial.print(analogRead(Xaxis_pin));
+  Serial.print(" | ");
+  Serial.print("Y-axis: ");
+  Serial.print(analogRead(Yaxis_pin));
+  Serial.print(" | ");
+  Serial.print("Switch:  ");
+  Serial.print(digitalRead(SW_pin));
+  Serial.print(" | ");
+}
+
+void getJoyStickVal() {
+    joystickPos = analogRead(Xaxis_pin);
+}
+
+//////////////////LOAD CELL///////////////////////
+
+void setupLoadCell() {
+  scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
+  scale.set_scale(-2100);
+}
+
+void readLoadCell() {
+  if (scale.is_ready()) {
+    reading = scale.read();
+  } else {
+    reading = 0;
+  }
+}
+
+void printLoadCell() {
+    Serial.print("Load cell: ");
+  if (reading != 0) {
+    Serial.print(scale.get_units(), 453.592);  } else {
+    Serial.print("HX711 not found.");
+  }
+   Serial.print(" | ");
+}
+
+
+//////////////////LIGHT SENSOR//////////////////////
+
+void readLightSensor() {
+  // read the value from the sensor:  // turn the ledPin on
+  int sensorValue = analogRead(LIGHT_SENSOR);
+  Serial.print("Light sensor: ");
+  Serial.print(sensorValue);
+  Serial.print(" | ");
+}
+
+///////////////////////////////////////
+
+void setupServo() {
+  myservo.attach(SERVO_PIN);  // attaches the servo on pin 9 to the servo object
+  servoPos = 155;
+}
+
+void servoMove() {
+  if ((joystickPos >= joystickClose) && (servoPos < servoClosed)){
+    servoPos += 1;
+    myservo.write(servoPos);
+  }
+  if ((joystickPos <= joystickOpen) && (servoPos > servoOpen)){
+    servoPos -= 1;
+    myservo.write(servoPos);
+  }  
+  timeSinceServoMove = 0;
+}
+
+//////////////////////////////////////////
+
+/////////////////LRA///////////////////////////
+
+void LRATest() {
+  driver.motorBForward(700);
+  driver.motorBStop();
+  // timeSinceLRATest = 0;
+}
+
+
+///////////////VOICE COIL////////////////////////
+
+uint32_t lastUpdate = 0, firstUpdate = 0; // used to calculate integration interval
+float updateFrequency = 600.0f;
+
+void setupCoil() {
+  analogWriteResolution(10);
+
+  driver.attachMotorA(inputA1, inputA2); // Texturing Voice Coil
+  //driver.attachMotorB(inputB1, inputB2); // Main Body Vibration
+  driver.motorAStop();
+  driver.motorBStop();
+
+  digitalWrite(SLP_PIN, HIGH);
+
+  for ( int i = 0; i < patternLength; ++i ){
+    hapticPattern[i] = 0;
+  }
+
+  timeBetweenAmpChanges = 1.0f / updateFrequency;
+  DoPatternCommand(vibration);
+}
+
+
+void DoPatternCommand(String val) {
   
-  Serial.print("Received [");
-  Serial.print(topic);
-  Serial.print("]: ");
-  Serial.println(msg);
+  int amp = val.toInt();
 
-  char topicCopy[50];
-  strncpy(topicCopy, topic, sizeof(topicCopy));
-  topicCopy[sizeof(topicCopy) - 1] = '\0';
+  if(amp > 400) {
+    amp = 400;
+  }
+  if(val < 0) {
+    amp = 0;
+  }
+  for ( int i = 0; i < patternLength; ++i ) {
+    hapticPattern[i] = random(-amp, amp);
+  }
+}
 
-  int row, col, r, g, b;
-  if (sscanf(topicCopy, "interactiles/space1/%d/%d", &row, &col) == 2) {
-    char* comma = strchr(msg, ',');
-    if (comma) {
-      *comma = ' ';
-      char* comma2 = strchr(comma + 1, ',');
-      if (comma2) *comma2 = ' ';
-      
-      if (sscanf(msg, "%d %d %d", &r, &g, &b) == 3) {
-        int ledIndex = mapToLedIndex(row, col);
-        if (ledIndex >= 0 && ledIndex < NUMPIXELS) {
-          strip.setPixelColor(ledIndex, strip.Color(
-            constrain(r, 0, 255),
-            constrain(g, 0, 255),
-            constrain(b, 0, 255)
-          ));
-          strip.show();
-        }
+void playPattern() {
+    if (timeBetweenAmpChanges < 1.0) {
+      if (hapticPattern[ patternIndex ]>=0){
+        analogWriteFrequency(3, 21000);
+        analogWriteFrequency(4, 21000);
+        driver.motorAForward(hapticPattern[ patternIndex ]);
+      }else{
+        analogWriteFrequency(3, 21000);
+        analogWriteFrequency(4, 21000);
+        driver.motorAReverse( -hapticPattern[ patternIndex ] );
       }
     }
-  }
+
+    else {
+      driver.motorAStop();
+    }
+
+    patternIndex += 1;
+    if (patternIndex>=patternLength) {
+      patternIndex = 0;
+    }
+    timeSinceAmpChange = 0.0f;
 }
 
-void reconnect() {
-  while (!client.connected()) {
-    Serial.print("Connecting to MQTT...");
-    String clientId = "ESP32Client-2" + String(random(0xffff), HEX);
-    if (client.connect(clientId.c_str())) {
-      Serial.println("connected");
-      client.subscribe("interactiles/space1/#");
-    } else {
-      Serial.print("failed, rc=");
-      Serial.print(client.state());
-      Serial.println(" retrying in 5s");
-      delay(5000);
-    }
-  }
-}
 
 void setup() {
-  Serial.begin(115200);
-  strip.begin();
-  strip.show();
-  strip.setBrightness(80);
-  setup_wifi();
-  client.setServer(mqtt_server, mqtt_port);
-  client.setCallback(callback);
-  randomSeed(micros());
+  delay(2000);
+  Serial.begin(2000000); 
+  pinMode(SLP_PIN, OUTPUT);
+  pinMode(7, INPUT);
+  pinMode(8, INPUT);
+  setupLoadCell();
+  setupJoystick();
+  setupServo();
+  setupCoil();
+  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LIGHT_SENSOR, INPUT);
+  //LRATest();
+
 }
+
 
 void loop() {
-  if (!client.connected()) {
-    reconnect();
-  }
-  client.loop();
 
-  char key = keypad.getKey();
-  if (key) {
-    Serial.print("Key pressed: ");
-    Serial.println(key);
+  blinkLED();
+  Now = micros();
 
-    int ledIndex = -1;
-    int row = -1, col = -1;
+  deltat = (Now - timeSinceLoop);
+  timeSinceLoop = Now;
+  timeSinceLoadCell += deltat;
+  timeSinceTest += deltat;
+  timeSinceLRATest += deltat;
+  timeSinceAmpChange += deltat;  
+  timeSinceServoMove += deltat;
 
-    switch (key) {
-      case '1': ledIndex = 0; row = 1; col = 1; break;
-      case '2': ledIndex = 2; row = 1; col = 2; break;
-      case '3': ledIndex = 1; row = 2; col = 1; break;
-      case '4': ledIndex = 3; row = 2; col = 2; break;
+  #if DEBUG
+  Serial.print(deltat);
+  Serial.print(" / ");
+  Serial.print(timeSinceLoadCell);
+  Serial.print(" / ");
+  Serial.println(timeSinceTest);
+  #endif
+
+  if ((timeSinceLoadCell) >= loadCellPing){
+    readLoadCell();
+    timeSinceLoadCell = 0;
     }
 
-    if (ledIndex != -1) {
-      currentStates[ledIndex] = static_cast<LedState>((currentStates[ledIndex] + 1) % numStates);
-      updateLed(ledIndex);
-
-      uint32_t color = strip.getPixelColor(ledIndex);
-      uint8_t r = (color >> 16) & 0xFF;
-      uint8_t g = (color >> 8) & 0xFF;
-      uint8_t b = color & 0xFF;
-
-      char full_topic[50];
-      snprintf(full_topic, sizeof(full_topic), "%s/%d/%d", base_topic, row, col);
-      
-      char payload[20];
-      snprintf(payload, sizeof(payload), "%d,%d,%d", r, g, b);
-      
-      if (client.publish(full_topic, payload)) {
-        Serial.print("Published to ");
-        Serial.print(full_topic);
-        Serial.print(": ");
-        Serial.println(payload);
-      } else {
-        Serial.println("Publish failed!");
-      }
+  if ((timeSinceTest) >= testLoop){
+    readJoystick();
+    readLightSensor();
+    printLoadCell();
+    Serial.println(" ");
+    timeSinceTest = 0;
     }
-    delay(50);
-  }
-}
 
-void updateLed(int ledIndex) {
-  switch (currentStates[ledIndex]) {
-    case OFF:    strip.setPixelColor(ledIndex, 0); break;
-    case RED:    strip.setPixelColor(ledIndex, strip.Color(255, 0, 0)); break;
-    case ORANGE: strip.setPixelColor(ledIndex, strip.Color(255, 100, 0)); break;
-    case GREEN:  strip.setPixelColor(ledIndex, strip.Color(0, 255, 0)); break;
-    case TEAL:   strip.setPixelColor(ledIndex, strip.Color(0, 128, 128)); break;
-    case BLUE:   strip.setPixelColor(ledIndex, strip.Color(0, 0, 255)); break;
-    case PURPLE: strip.setPixelColor(ledIndex, strip.Color(128, 0, 128)); break;
-    case WHITE:  strip.setPixelColor(ledIndex, strip.Color(255, 255, 255)); break;
-  }
-  strip.show();
-}
+  // if (timeSinceLRATest >= LRATestInterval) {
+  //   LRATest();
+  // }
 
-int mapToLedIndex(int row, int col) {
-  if (row == 1 && col == 1) return 0;
-  if (row == 1 && col == 2) return 2;
-  if (row == 2 && col == 1) return 1;
-  if (row == 2 && col == 2) return 3;
-  return -1;
+  if (timeSinceAmpChange >= timeBetweenAmpChanges){
+    playPattern();
+    }
+  
+  if (timeSinceServoMove >= timeBetweenServoMoves){
+    getJoyStickVal();
+    servoMove();
+  }
 }
