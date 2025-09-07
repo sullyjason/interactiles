@@ -32,7 +32,7 @@ const char* password = "PASSWORD";
 The channel structure is as follows:
 interactiles/space[]/row/col/r,g,b
 
-<img src="MQTT_Structure.png" width="80%"/>
+<img src="MQTT_structure.png" width="80%"/>
 
 The space ID is currently hardcoded. In future versions it should be possible to set this via a DIP switch or similar.
 
