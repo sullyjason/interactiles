@@ -1,0 +1,11 @@
+# KiCad backups
+*-backups/
+**/production/backups/
+.history/
+.history[_ ]*
+
+# KiCad autosave
+~_autosave-*
+
+# macOS
+.DS_Store
