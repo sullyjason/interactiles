@@ -522,7 +522,7 @@
 			(uuid "5da23989-c291-4889-b71d-609d65dde557")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -924,7 +924,7 @@
 			(uuid "fd8c75f6-e7e0-4160-a186-6c58ecfa5301")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -1326,7 +1326,7 @@
 			(uuid "7c725413-7013-420e-a845-bd19fcfc06b6")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -1728,7 +1728,7 @@
 			(uuid "6e815a2a-2989-48b3-9757-944e2d56dea9")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -2130,7 +2130,7 @@
 			(uuid "b46ef8b2-d5a0-43be-a372-cce977de73d6")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -2532,7 +2532,7 @@
 			(uuid "8741dfbb-0efc-42ac-ae0f-60b635ff89fb")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -3035,7 +3035,7 @@
 			(uuid "d0bff61c-ffc2-4d16-b711-6c3c57771e6b")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -3437,7 +3437,7 @@
 			(uuid "3cb368dc-9645-4867-b828-5fcec85a6a64")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -3940,7 +3940,7 @@
 			(uuid "2cc769fd-01be-45fb-95ea-1fd71050cb59")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -4342,7 +4342,7 @@
 			(uuid "18f45d77-bd3d-46b9-a969-ce52ac3ff6ad")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -4845,7 +4845,7 @@
 			(uuid "6ee56b12-3ad4-4dca-8f40-9e4cf9e569aa")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -5449,7 +5449,7 @@
 			(uuid "e0875550-66b2-49cc-9085-599ae1535b18")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -5851,7 +5851,7 @@
 			(uuid "d6c9ad3e-464d-4556-8a65-973410528eb5")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -6455,7 +6455,7 @@
 			(uuid "2d8db07a-0f4f-4c4e-98a6-6d4470144cf0")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "${DOWNLOADS}/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -6837,7 +6837,7 @@
 			(uuid "05f9f8df-e28b-4de9-b5e1-b8d5816012ea")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x15_P2.54mm_Vertical.step"
+		(model "${KICAD8_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x15_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7340,7 +7340,7 @@
 			(uuid "d63aa8fd-3d89-4999-be0d-fb14df7631bd")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../Components/3D Files/PLB-N1PRGB-GTW-AI v2.step"
+		(model "/Users/silvanroth/Documents/GitHub/Neopixel_Modules/3D Files/PLB-N1PRGB-GTW-AI v2.step"
 			(offset
 				(xyz 14 -15.7 9)
 			)
@@ -7599,7 +7599,7 @@
 			(uuid "1d266b43-f098-40f9-a3f1-f15261786e83")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x02_P2.54mm_Vertical.step"
+		(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x02_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7804,7 +7804,7 @@
 			(uuid "0d665835-7414-41e2-a528-fb104d9eae02")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8029,7 +8029,7 @@
 			(uuid "9ae40120-13a6-40ab-bc6d-a449a2d7f918")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_1206_3216Metric.step"
+		(model "${KICAD8_3DMODEL_DIR}/LED_SMD.3dshapes/LED_1206_3216Metric.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8495,7 +8495,7 @@
 			(uuid "0f795838-8fa3-4d2b-8057-2087608214ea")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal.step"
+		(model "${KICAD8_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -9390,7 +9390,7 @@
 			(uuid "c48e4047-7280-42d8-aa1d-24c956e63913")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_FFC-FPC.3dshapes/TE_1-84952-6_1x16-1MP_P1.0mm_Horizontal.step"
+		(model "${KICAD8_3DMODEL_DIR}/Connector_FFC-FPC.3dshapes/TE_1-84952-6_1x16-1MP_P1.0mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)

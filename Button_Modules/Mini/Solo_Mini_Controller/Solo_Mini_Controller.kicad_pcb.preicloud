@@ -10195,7 +10195,7 @@
 			(pintype "input")
 			(uuid "1f2d1612-5189-49a8-962c-462436a01610")
 		)
-		(model "${AMZPATH}/3dmodels/AMz3D.3dshapes/XIAO-ESP32S3 v2.step"
+		(model "/Users/silvanroth/Library/Mobile Documents/com~apple~CloudDocs/Interactiles/Components/seeed-studio-xiao-esp32s3-1.snapshot.1/XIAO-ESP32S3 v2.step"
 			(offset
 				(xyz 15 8.5 0)
 			)

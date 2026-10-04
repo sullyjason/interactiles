@@ -404,7 +404,7 @@
 			(uuid "47ff4642-f1b4-44ff-8b83-a09ef8d2bba1")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-323.step"
+		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-323.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -6270,7 +6270,7 @@
 				(xyz 0 0 0)
 			)
 		)
-		(model "${DOWNLOADS}/Various Kicad stuff/176690807-3-p70-2000045r/p70-2000045r.stp"
+		(model "${DOWNLOADS}/176690807-3-p70-2000045r/p70-2000045r.stp"
 			(offset
 				(xyz -16 -9.5 0)
 			)
@@ -6281,7 +6281,7 @@
 				(xyz -90 0 0)
 			)
 		)
-		(model "${DOWNLOADS}/Various Kicad stuff/176690807-3-p70-2000045r/p70-2000045r.stp"
+		(model "${DOWNLOADS}/176690807-3-p70-2000045r/p70-2000045r.stp"
 			(offset
 				(xyz -16 -7.5 0)
 			)
@@ -6292,7 +6292,7 @@
 				(xyz -90 0 0)
 			)
 		)
-		(model "${DOWNLOADS}/Various Kicad stuff/176690807-3-p70-2000045r/p70-2000045r.stp"
+		(model "${DOWNLOADS}/176690807-3-p70-2000045r/p70-2000045r.stp"
 			(offset
 				(xyz 17.5 -10 0)
 			)
@@ -6303,7 +6303,7 @@
 				(xyz -90 0 0)
 			)
 		)
-		(model "${DOWNLOADS}/Various Kicad stuff/176690807-3-p70-2000045r/p70-2000045r.stp"
+		(model "${DOWNLOADS}/176690807-3-p70-2000045r/p70-2000045r.stp"
 			(offset
 				(xyz 17.5 -8 0)
 			)
@@ -6314,7 +6314,7 @@
 				(xyz -90 0 0)
 			)
 		)
-		(model "${DOWNLOADS}/Various Kicad stuff/176690807-3-p70-2000045r/p70-2000045r.stp"
+		(model "${DOWNLOADS}/176690807-3-p70-2000045r/p70-2000045r.stp"
 			(offset
 				(xyz 17.5 -5 0)
 			)
@@ -6325,7 +6325,7 @@
 				(xyz -90 0 0)
 			)
 		)
-		(model "${DOWNLOADS}/Various Kicad stuff/176690807-3-p70-2000045r/p70-2000045r.stp"
+		(model "${DOWNLOADS}/176690807-3-p70-2000045r/p70-2000045r.stp"
 			(offset
 				(xyz 17.5 -3 0)
 			)
@@ -8154,7 +8154,7 @@
 			(uuid "7a54fa7d-5e89-4a6d-bcf6-31f6ad272bb2")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8504,7 +8504,7 @@
 			(uuid "2c465f95-6968-430b-8bb6-21aa8c63787f")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_0805_2012Metric.step"
+		(model "${KICAD8_3DMODEL_DIR}/LED_SMD.3dshapes/LED_0805_2012Metric.wrl"
 			(offset
 				(xyz 0 0 0)
 			)

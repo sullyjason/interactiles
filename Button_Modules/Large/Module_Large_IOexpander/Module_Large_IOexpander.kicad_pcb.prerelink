@@ -328,7 +328,7 @@
 			(pintype "passive")
 			(uuid "40341b5f-8fae-4685-a09b-93d9a50c1197")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.step"
+		(model "${KICAD8_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.wrl"
 			(hide yes)
 			(offset
 				(xyz 0 0 0)
@@ -539,7 +539,7 @@
 			(pintype "passive")
 			(uuid "f2858c34-12db-4868-b99a-d2335a8553d8")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+		(model "${KICAD8_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1185,7 +1185,7 @@
 			(pintype "bidirectional")
 			(uuid "ff8a1d6b-ab45-4424-bacc-c1ef495bc991")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-28W_7.5x17.9mm_P1.27mm.step"
+		(model "${KICAD8_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-28W_7.5x17.9mm_P1.27mm.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2600,7 +2600,7 @@
 			(pintype "passive")
 			(uuid "83c2794a-8231-435b-86a5-e737a1e25adb")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_DIP_SPSTx03_Slide_6.7x9.18mm_W8.61mm_P2.54mm_LowProfile.step"
+		(model "${KISYS3DMOD}/Button_Switch_SMD.3dshapes/SW_DIP_SPSTx03_Slide_6.7x9.18mm_W8.61mm_P2.54mm_LowProfile.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3072,7 +3072,7 @@
 			(pintype "passive+no_connect")
 			(uuid "a6b2461f-8d2e-4d8a-a143-11aaf5175ee1")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_Array_Concave_4x0603.step"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_Array_Concave_4x0603.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3505,7 +3505,7 @@
 			(roundrect_rratio 0.119048)
 			(uuid "1f5cd081-4a1a-4d98-9c2c-3a648438ced1")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_Molex.3dshapes/Molex_PicoBlade_53261-0471_1x04-1MP_P1.25mm_Horizontal.step"
+		(model "${KICAD8_3DMODEL_DIR}/Connector_Molex.3dshapes/Molex_PicoBlade_53261-0471_1x04-1MP_P1.25mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3769,7 +3769,7 @@
 			(pintype "passive")
 			(uuid "0fe33378-d164-45c9-b356-662bd7bb6879")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_Array_Concave_4x0603.step"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_Array_Concave_4x0603.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3980,7 +3980,7 @@
 			(pintype "passive")
 			(uuid "8b8f62e5-c470-4665-9f72-f8086f1d76bd")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+		(model "${KICAD8_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4190,7 +4190,7 @@
 			(pintype "passive")
 			(uuid "3afc92ab-e5c8-441d-8886-907cf1594727")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+		(model "${KICAD8_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4399,7 +4399,7 @@
 			(pintype "passive")
 			(uuid "09471f9c-c839-4332-a3c4-e397e7ba85ea")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+		(model "${KICAD8_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4932,7 +4932,7 @@
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(uuid "cf343e58-e342-4110-b73e-603c057dcff5")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_FFC-FPC.3dshapes/TE_1-84952-6_1x16-1MP_P1.0mm_Horizontal.step"
+		(model "${KICAD8_3DMODEL_DIR}/Connector_FFC-FPC.3dshapes/TE_1-84952-6_1x16-1MP_P1.0mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)

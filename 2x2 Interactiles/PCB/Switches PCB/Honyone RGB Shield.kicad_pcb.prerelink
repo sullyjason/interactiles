@@ -418,7 +418,7 @@
 			(pintype "passive")
 			(uuid "5d95b414-5312-4c9b-97c1-486ce78c4f0a")
 		)
-		(model "${SILVANS_3DMODELS}/SHANPU_SPCGMS9YCS005B.step"
+		(model "${DOWNLOADS}/User Library-SHANPU_SPCGMS9YCS005B.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -943,7 +943,7 @@
 			(pintype "passive")
 			(uuid "d99a9d8c-2d3c-4efb-9ae7-8e18b6e2fd42")
 		)
-		(model "${SILVANS_3DMODELS}/SHANPU_SPCGMS9YCS005B.step"
+		(model "${DOWNLOADS}/User Library-SHANPU_SPCGMS9YCS005B.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1177,7 +1177,7 @@
 			(pintype "passive")
 			(uuid "40bd0947-fb6c-439f-8217-b6a7ce92b62a")
 		)
-		(model "${SILVANS_3DMODELS}/SHANPU_SPCGMS9YCS005B.step"
+		(model "${DOWNLOADS}/User Library-SHANPU_SPCGMS9YCS005B.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1412,7 +1412,7 @@
 			(pintype "passive")
 			(uuid "e168eeaf-b3ba-4682-85b2-ba1649462866")
 		)
-		(model "${SILVANS_3DMODELS}/SHANPU_SPCGMS9YCS005B.step"
+		(model "${DOWNLOADS}/User Library-SHANPU_SPCGMS9YCS005B.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1678,7 +1678,7 @@
 			(remove_unused_layers no)
 			(uuid "997000f0-3c2b-4b6e-b8f7-58c172c9a926")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x10_P2.54mm_Vertical.step"
+		(model "${KICAD8_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x10_P2.54mm_Vertical.wrl"
 			(hide yes)
 			(offset
 				(xyz 0 0 0)
@@ -1969,7 +1969,7 @@
 			(pintype "passive")
 			(uuid "7136b4f9-d49b-4c43-9075-a4453b7d6768")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.step"
+		(model "${KICAD8_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2349,7 +2349,7 @@
 			(pintype "passive")
 			(uuid "bd204a8c-2b7c-4dae-8f1a-cbe8fcd5692e")
 		)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x13_P2.54mm_Vertical.step"
+		(model "${KICAD8_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x13_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
 			)

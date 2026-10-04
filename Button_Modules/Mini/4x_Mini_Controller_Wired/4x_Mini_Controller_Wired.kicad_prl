@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 0,
+    "active_layer": 2,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -61,7 +61,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "Interactiles_60px_Controller_Wired.kicad_prl",
+    "filename": "4x_Mini_Controller_Wired.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {

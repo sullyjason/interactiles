@@ -6869,7 +6869,7 @@
 			(pintype "passive")
 			(uuid "9ac112f6-f7e1-4974-a047-8e5ba43f8186")
 		)
-		(model "${SILVANS_3DMODELS}/CR123A  Battery Holder.step"
+		(model "/Users/silvanroth/Library/Mobile Documents/com~apple~CloudDocs/Interactiles/Battery Powered Version/CR123A  Battery Holder.step"
 			(offset
 				(xyz 21.5 -9 0)
 			)
@@ -7839,7 +7839,7 @@
 			(pintype "input")
 			(uuid "299da1a3-2101-4c0b-bd9c-dcd830d7d24b")
 		)
-		(model "${AMZPATH}/3dmodels/AMz3D.3dshapes/XIAO-ESP32S3 v2.step"
+		(model "/Users/silvanroth/Library/Mobile Documents/com~apple~CloudDocs/Interactiles/Components/seeed-studio-xiao-esp32s3-1.snapshot.1/XIAO-ESP32S3 v2.step"
 			(offset
 				(xyz 15 8.5 0.5)
 			)
