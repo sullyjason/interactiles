@@ -36,3 +36,9 @@ The vision, of course, is a larger scale grid of clickable illuminated buttons. 
 - [ ] Design miniature modules
 - [ ] Enclosure for miniature modules
 - [ ] Real world testing of 2x2 (in progress)
+
+## Events
+
+Exhibitions and real-world showings of Interactiles, each documented in its own folder under [`events/`](events/).
+
+- [Zürich Decompression 2026](events/2026-decompression-zurich/) — two connected 5×3 grids in a fine-dining-inspired frame. Kraftwerk, Zürich, 9–11 October 2026.
